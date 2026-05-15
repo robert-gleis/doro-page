@@ -1,14 +1,38 @@
 ---
-// Hero section component
+const imageSrc = `${import.meta.env.BASE_URL}image.jpeg`;
 ---
 
-<section class="hero">
-	<div class="hero-content">
-		<h1>Dorothea Preiß</h1>
-		<p class="subtitle">Tiefenpsychologisch fundierte und analytische Kinder- und Jugendpsychotherapeutin</p>
-		<p class="description">
-			Psychotherapeutische Praxis für Kinder, Jugendliche und junge Erwachsene (9-21 J.)
+<div
+	class="flex flex-col md:flex-col-reverse items-center pt-lg md:pt-md pb-xl gap-md md:gap-lg"
+>
+	<section class="flex flex-col items-center text-center">
+		<p
+			class="text-label-md text-secondary uppercase tracking-widest mb-sm max-w-[90%]"
+		>
+			Psychotherapeutische Praxis für Kinder, Jugendliche und junge
+			Erwachsene (9–21 J.)
 		</p>
-	</div>
-</section>
+		<h1
+			class="text-headline-lg-mobile md:text-headline-lg text-primary mb-md"
+		>
+			Dorothea Preiß
+		</h1>
+		<p class="text-body-md md:text-body-lg text-on-surface-variant max-w-[80%]">
+			Tiefenpsychologisch fundierte und analytische Kinder- und Jugendpsychotherapeutin mit Schwerpunkt Säuglings-, Kleinkind- und Elternpsychotherapie sowie Psychotraumatologie.
+		</p>
+	</section>
 
+	<div class="w-full flex justify-center">
+		<div
+			class="relative w-full aspect-[0.69] max-w-[320px] md:max-w-[420px] rounded-xl overflow-hidden shadow-[0_20px_40px_-15px_rgba(83,88,69,0.18)]"
+		>
+			<img
+				alt="Aquarell-Illustration: Therapeutische Begegnung in zwei Sesseln"
+				class="w-full h-full object-cover"
+				src={imageSrc}
+				loading="eager"
+				decoding="async"
+			/>
+		</div>
+	</div>
+</div>

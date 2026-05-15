@@ -1,5 +1,4 @@
 ---
-// Astro component script
 import Head from '../components/Head.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
@@ -15,17 +14,23 @@ import '../styles/global.css';
 	<head>
 		<Head />
 	</head>
-	<body>
+	<body class="bg-surface-bright text-on-surface antialiased">
 		<a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
-		
-		<Header />
 
-		<main id="main-content">
+		<!-- <Header /> -->
+
+		<main
+			id="main-content"
+			class="max-w-[1120px] mx-auto px-margin-mobile pb-xl"
+		>
 			<Hero />
-			<About />
-			<Services />
-			<Qualifications />
-			<Contact />
+
+			<div class="max-w-[920px] mx-auto">
+				<!-- <About /> -->
+				<!-- <Services /> -->
+				<!-- <Qualifications /> -->
+				<Contact />
+			</div>
 		</main>
 
 		<Footer />

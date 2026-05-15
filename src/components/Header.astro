@@ -1,16 +1,57 @@
 ---
-// Header component with navigation
+// Header — sticky top app bar with brand and (desktop) anchor nav
 ---
 
-<header>
-	<nav>
-		<a href="#" class="logo">Praxis Dorothea Preiß</a>
-		<ul class="nav-links">
-			<li><a href="#ueber-mich">Über mich</a></li>
-			<li><a href="#leistungen">Leistungen</a></li>
-			<li><a href="#qualifikationen">Qualifikationen</a></li>
-			<li><a href="#kontakt">Kontakt</a></li>
+<header
+	class="bg-surface-bright/85 backdrop-blur-md w-full sticky top-0 z-50 border-b border-outline-variant/40"
+>
+	<nav
+		class="max-w-[1120px] mx-auto px-margin-mobile py-md flex items-center justify-center md:justify-between gap-md"
+		aria-label="Hauptnavigation"
+	>
+		<a href="#" class="flex items-center gap-xs text-primary no-underline">
+			<span
+				class="material-symbols-outlined text-headline-md"
+				aria-hidden="true">spa</span
+			>
+			<span class="text-headline-md tracking-tight font-semibold">
+				Praxis Dorothea Preiß
+			</span>
+		</a>
+
+		<ul class="hidden md:flex items-center gap-md list-none m-0 p-0">
+			<li>
+				<a
+					href="#ueber-mich"
+					class="text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200 no-underline"
+				>
+					Über mich
+				</a>
+			</li>
+			<li>
+				<a
+					href="#leistungen"
+					class="text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200 no-underline"
+				>
+					Leistungen
+				</a>
+			</li>
+			<li>
+				<a
+					href="#qualifikationen"
+					class="text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200 no-underline"
+				>
+					Qualifikationen
+				</a>
+			</li>
+			<li>
+				<a
+					href="#kontakt"
+					class="text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200 no-underline"
+				>
+					Kontakt
+				</a>
+			</li>
 		</ul>
 	</nav>
 </header>
-

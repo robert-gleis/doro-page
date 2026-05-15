@@ -1,9 +1,32 @@
 ---
-// Footer component
+// Footer — practice name, copyright, legal links
 ---
 
-<footer>
-	<p>&copy; 2024 Dorothea Preiß - Psychotherapeutische Praxis</p>
-	<p style="font-size: 0.9rem; opacity: 0.9;">Diese Website befindet sich im Aufbau</p>
-</footer>
+<footer
+	class="bg-surface-container w-full px-margin-mobile py-lg flex flex-col items-center gap-md mt-xl"
+>
+	<div class="flex items-center gap-xs text-primary">
+		<span class="text-headline-md tracking-tight font-semibold">
+			Praxis Dorothea Preiß
+		</span>
+	</div>
 
+	<p class="text-label-sm text-on-surface-variant text-center m-0">
+		© {new Date().getFullYear()} Praxis Dorothea Preiß — Psychotherapeutische Praxis
+	</p>
+
+	<div class="flex gap-lg">
+		<a
+			href="#"
+			class="text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 no-underline"
+		>
+			Impressum
+		</a>
+		<a
+			href="#"
+			class="text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200 no-underline"
+		>
+			Datenschutz
+		</a>
+	</div>
+</footer>

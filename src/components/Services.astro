@@ -1,28 +1,91 @@
 ---
-// Services section component
+// Services — two cards in Serene Practice style
 ---
 
-<section id="leistungen">
-	<h2 class="section-title">Leistungen</h2>
-	
-	<div class="card">
-		<h3>Psychotherapie</h3>
-		<ul>
-			<li>Für Kinder, Jugendliche und junge Erwachsene (9-21 Jahre)</li>
-			<li>Alle Kassen und Privat</li>
-			<li>Tiefenpsychologisch fundierte Psychotherapie</li>
-			<li>Analytische Psychotherapie</li>
-			<li>Spezialisierung auf Traumatherapie</li>
-		</ul>
-	</div>
+<section id="leistungen" class="scroll-mt-24 mb-md">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+		<article class="bg-surface-container-low rounded-xl p-md">
+			<div class="flex items-center gap-sm mb-md">
+				<span
+					class="material-symbols-outlined text-primary"
+					aria-hidden="true">psychology</span
+				>
+				<h2 class="text-headline-md text-primary m-0">
+					Psychotherapie
+				</h2>
+			</div>
+			<ul class="space-y-sm text-body-md text-on-surface-variant">
+				<li class="flex gap-sm items-start">
+					<span
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5 is-filled"
+						aria-hidden="true">check_circle</span
+					>
+					<span>Für Kinder, Jugendliche und junge Erwachsene (9–21 Jahre)</span>
+				</li>
+				<li class="flex gap-sm items-start">
+					<span
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5 is-filled"
+						aria-hidden="true">check_circle</span
+					>
+					<span>Alle gesetzlichen Kassen und privat</span>
+				</li>
+				<li class="flex gap-sm items-start">
+					<span
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5 is-filled"
+						aria-hidden="true">check_circle</span
+					>
+					<span>Tiefenpsychologisch fundierte Psychotherapie</span>
+				</li>
+				<li class="flex gap-sm items-start">
+					<span
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5 is-filled"
+						aria-hidden="true">check_circle</span
+					>
+					<span>Analytische Psychotherapie</span>
+				</li>
+				<li class="flex gap-sm items-start">
+					<span
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5 is-filled"
+						aria-hidden="true">check_circle</span
+					>
+					<span>Spezialisierung auf Traumatherapie</span>
+				</li>
+			</ul>
+		</article>
 
-	<div class="card">
-		<h3>Supervision und Fallberatung</h3>
-		<ul>
-			<li>Für Mitarbeiterinnen und Mitarbeiter in Kinder- und Jugendhilfeeinrichtungen</li>
-			<li>Fallberatung bei komplexen Fällen</li>
-			<li>Supervision für Teams und Einzelpersonen</li>
-		</ul>
+		<article class="bg-surface-container-low rounded-xl p-md">
+			<div class="flex items-center gap-sm mb-md">
+				<span
+					class="material-symbols-outlined text-primary"
+					aria-hidden="true">groups</span
+				>
+				<h2 class="text-headline-md text-primary m-0">
+					Supervision &amp; Fallberatung
+				</h2>
+			</div>
+			<ul class="space-y-sm text-body-md text-on-surface-variant">
+				<li class="flex gap-sm items-start">
+					<span
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5 is-filled"
+						aria-hidden="true">check_circle</span
+					>
+					<span>Für Mitarbeitende in Kinder- und Jugendhilfeeinrichtungen</span>
+				</li>
+				<li class="flex gap-sm items-start">
+					<span
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5 is-filled"
+						aria-hidden="true">check_circle</span
+					>
+					<span>Fallberatung bei komplexen Fällen</span>
+				</li>
+				<li class="flex gap-sm items-start">
+					<span
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5 is-filled"
+						aria-hidden="true">check_circle</span
+					>
+					<span>Supervision für Teams und Einzelpersonen</span>
+				</li>
+			</ul>
+		</article>
 	</div>
 </section>
-
