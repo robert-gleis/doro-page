@@ -1,14 +1,75 @@
 ---
-// Head component with meta tags, fonts and title
+// Head component — meta tags, fonts, OG, JSON-LD structured data
+const site = Astro.site ?? new URL('https://robert-gleis.github.io');
+const canonicalUrl = new URL(import.meta.env.BASE_URL, site).href;
+const ogImage = new URL(`${import.meta.env.BASE_URL}image.jpeg`, site).href;
+
+const description =
+	'Psychotherapeutische Praxis für Kinder, Jugendliche und junge Erwachsene (9–21 J.) in Dormagen Zons. Dorothea Preiß — Tiefenpsychologisch fundierte und analytische Kinder- und Jugendpsychotherapeutin.';
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'Psychologist',
+	name: 'Praxis Dorothea Preiß',
+	description,
+	image: ogImage,
+	url: canonicalUrl,
+	telephone: '+4921339362102',
+	email: 'd.preis@posteo.de',
+	address: {
+		'@type': 'PostalAddress',
+		streetAddress: 'Saarwerdenstr. 9',
+		addressLocality: 'Dormagen',
+		addressRegion: 'NW',
+		postalCode: '41541',
+		addressCountry: 'DE',
+	},
+	contactPoint: {
+		'@type': 'ContactPoint',
+		telephone: '+4921339362102',
+		contactType: 'Telefonsprechstunde',
+		availableLanguage: 'de',
+		hoursAvailable: [
+			{
+				'@type': 'OpeningHoursSpecification',
+				dayOfWeek: ['Monday', 'Wednesday'],
+				opens: '12:00',
+				closes: '13:00',
+			},
+		],
+	},
+	founder: {
+		'@type': 'Person',
+		name: 'Dorothea Preiß',
+		jobTitle: 'Kinder- und Jugendpsychotherapeutin',
+	},
+	knowsLanguage: 'de',
+	audience: {
+		'@type': 'PeopleAudience',
+		suggestedMinAge: 9,
+		suggestedMaxAge: 21,
+	},
+};
 ---
 
 <meta charset="utf-8" />
-<link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+<link
+	rel="icon"
+	type="image/x-icon"
+	href={`${import.meta.env.BASE_URL}favicon.ico`}
+/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Theme color -->
 <meta name="theme-color" content="#faf9f6" />
+
+<!-- Canonical -->
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Robots / AI crawlers -->
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="googlebot" content="index, follow" />
 
 <!-- Google Fonts: Plus Jakarta Sans + Material Symbols Outlined -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,10 +84,7 @@
 />
 
 <!-- SEO Meta Tags -->
-<meta
-	name="description"
-	content="Psychotherapeutische Praxis für Kinder, Jugendliche und junge Erwachsene (0-21 J.) in Dormagen Zons. Dorothea Preiß — Tiefenpsychologisch fundierte und analytische Kinder- und Jugendpsychotherapeutin."
-/>
+<meta name="description" content={description} />
 <meta
 	name="keywords"
 	content="Kinderpsychotherapie, Jugendpsychotherapie, Psychotherapie Dormagen, Traumatherapie, SKEPT, Psychotraumatologie"
@@ -35,21 +93,29 @@
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:site_name" content="Praxis Dorothea Preiß" />
 <meta
 	property="og:title"
 	content="Psychotherapeutische Praxis Dorothea Preiß — Dormagen Zons"
 />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="724" />
+<meta property="og:image:height" content="1024" />
 <meta
-	property="og:description"
-	content="Psychotherapeutische Praxis für Kinder, Jugendliche und junge Erwachsene (9-21 J.)"
+	property="og:image:alt"
+	content="Aquarell-Illustration: Therapeutische Begegnung in zwei Sesseln"
 />
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Psychotherapeutische Praxis Dorothea Preiß" />
-<meta
-	name="twitter:description"
-	content="Psychotherapeutische Praxis für Kinder, Jugendliche und junge Erwachsene (9-21 J.)"
-/>
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
 
 <title>Psychotherapeutische Praxis Dorothea Preiß — Dormagen Zons</title>
+
+<!-- Structured Data: Psychologist / MedicalBusiness -->
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

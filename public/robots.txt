@@ -1,0 +1,70 @@
+# robots.txt — Praxis Dorothea Preiß
+# https://robert-gleis.github.io/doro-page/
+#
+# Diese Datei erlaubt sowohl klassischen Suchmaschinen-Crawlern als auch
+# KI-/LLM-Crawlern den vollständigen Zugriff. Damit ist die Seite in
+# Suchmaschinen indexierbar und für AI-Assistenten (ChatGPT, Claude,
+# Perplexity, Gemini, Apple Intelligence usw.) zitierbar.
+
+# --- Klassische Suchmaschinen (Standard: alles erlauben) ----------------
+User-agent: *
+Allow: /
+
+# --- KI-/LLM-Crawler (explizite Freigabe) -------------------------------
+# OpenAI (ChatGPT-Training & -Browsing, OAI-Suche)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI (Gemini, AI Overviews — separat von Googlebot steuerbar)
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (Datenquelle vieler LLMs)
+User-agent: CCBot
+Allow: /
+
+# Weitere relevante AI-Crawler
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+# --- Sitemap ------------------------------------------------------------
+Sitemap: https://robert-gleis.github.io/doro-page/sitemap-index.xml
