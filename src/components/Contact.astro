@@ -1,137 +1,150 @@
 ---
-// Contact — combined Kontakt + Sprechzeiten card, plus Wichtige Informationen
+// Contact — four cards in Serene Practice style
 ---
 
 <section id="kontakt" class="scroll-mt-24 mb-md">
-	<article class="bg-surface-container-low rounded-xl p-md">
-		<div class="grid grid-cols-1 md:grid-cols-2">
-			<div class="md:pr-md">
-				<div class="flex items-center gap-sm mb-md">
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-md">
+		<article class="bg-surface-container-low rounded-xl p-md">
+			<div class="flex items-center gap-sm mb-md">
+				<span
+					class="material-symbols-outlined text-primary"
+					aria-hidden="true">contact_page</span
+				>
+				<h2 class="text-headline-md text-primary m-0">Kontakt</h2>
+			</div>
+			<div class="space-y-sm text-on-surface-variant">
+				<div class="flex gap-sm items-start">
 					<span
-						class="material-symbols-outlined text-primary"
-						aria-hidden="true">contact_page</span
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5"
+						aria-hidden="true">location_on</span
 					>
-					<h2 class="text-headline-md text-primary m-0">Kontakt</h2>
+					<p class="text-body-md m-0">
+						Saarwerdenstr. 9, 41541 Dormagen Zons
+					</p>
 				</div>
-				<div class="space-y-sm text-on-surface-variant">
-					<div class="flex gap-sm items-start">
-						<span
-							class="material-symbols-outlined text-secondary text-[20px] mt-0.5"
-							aria-hidden="true">location_on</span
-						>
-						<p class="text-body-md m-0">
-							Saarwerdenstr. 9, 41541 Dormagen Zons
-						</p>
-					</div>
-					<div class="flex gap-sm items-start">
-						<span
-							class="material-symbols-outlined text-secondary text-[20px] mt-0.5"
-							aria-hidden="true">call</span
-						>
-						<a
-							href="tel:+4921339362102"
-							class="text-body-md text-on-surface-variant hover:text-primary transition-colors no-underline"
-						>
-							02133 9362102
-						</a>
-					</div>
-					<div class="flex gap-sm items-start">
-						<span
-							class="material-symbols-outlined text-secondary text-[20px] mt-0.5"
-							aria-hidden="true">mail</span
-						>
-						<a
-							href="mailto:d.preis@posteo.de"
-							class="text-body-md text-on-surface-variant hover:text-primary transition-colors no-underline break-all"
-						>
-							d.preis@posteo.de
-						</a>
-					</div>
+				<div class="flex gap-sm items-start">
+					<span
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5"
+						aria-hidden="true">call</span
+					>
+					<a
+						href="tel:+4921339362102"
+						class="text-body-md text-on-surface-variant hover:text-primary transition-colors no-underline"
+					>
+						02133 9362102
+					</a>
+				</div>
+				<div class="flex gap-sm items-start">
+					<span
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5"
+						aria-hidden="true">mail</span
+					>
+					<a
+						href="mailto:d.preis@posteo.de"
+						class="text-body-md text-on-surface-variant hover:text-primary transition-colors no-underline break-all"
+					>
+						d.preis@posteo.de
+					</a>
+				</div>
+				<div class="flex gap-sm items-start">
+					<span
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5"
+						aria-hidden="true">health_and_safety</span
+					>
+					<p class="text-body-md m-0">Alle Kassen und Privat</p>
 				</div>
 			</div>
+		</article>
 
-			<div
-				class="mt-md pt-md border-t border-outline-variant/40 md:mt-0 md:pt-0 md:border-t-0 md:border-l md:pl-md"
-			>
-				<div class="flex items-center gap-sm mb-md">
-					<span
-						class="material-symbols-outlined text-primary"
-						aria-hidden="true">schedule</span
-					>
-					<h2 class="text-headline-md text-primary m-0">
-						Telefonische Sprechzeiten
-					</h2>
+		<article class="bg-surface-container-low rounded-xl p-md">
+			<div class="flex items-center gap-sm mb-md">
+				<span
+					class="material-symbols-outlined text-primary"
+					aria-hidden="true">schedule</span
+				>
+				<h2 class="text-headline-md text-primary m-0">
+					Telefonische Sprechzeiten
+				</h2>
+			</div>
+			<div class="space-y-xs text-on-surface-variant">
+				<div
+					class="flex justify-between items-center py-xs "
+				>
+					<span class="text-label-md">Montag</span>
+					<span class="text-body-md">12:00 – 13:00</span>
 				</div>
-				<div class="space-y-xs text-on-surface-variant">
-					<div
-						class="flex justify-between items-center py-xs border-b border-outline-variant/30"
+				<div
+					class="flex justify-between items-center py-xs "
+				>
+					<span class="text-label-md">Mittwoch</span>
+					<span class="text-body-md">12:00 – 13:00</span>
+				</div>
+				<div class="pt-sm">
+					<p
+						class="text-label-md font-bold text-secondary italic m-0"
 					>
-						<span class="text-label-md">Montag</span>
-						<span class="text-body-md">12:00 – 13:00</span>
-					</div>
-					<div
-						class="flex justify-between items-center py-xs border-b border-outline-variant/30"
-					>
-						<span class="text-label-md">Mittwoch</span>
-						<span class="text-body-md">12:00 – 13:00</span>
-					</div>
-					<div class="pt-sm">
-						<p
-							class="text-label-md font-bold text-secondary italic m-0"
-						>
-							Termine nach Vereinbarung
-						</p>
-					</div>
+						Termine nach Vereinbarung
+					</p>
 				</div>
 			</div>
-		</div>
-	</article>
+		</article>
 
-	<article
-		class="bg-secondary-container rounded-xl p-md border-l-4 border-primary mt-md"
-	>
-		<div class="flex items-center gap-sm mb-md">
-			<span
-				class="material-symbols-outlined text-primary"
-				aria-hidden="true">info</span
-			>
-			<h2 class="text-headline-md text-primary m-0">
-				Wichtige Informationen
-			</h2>
-		</div>
-		<div class="space-y-md">
-			<p class="text-label-md text-on-secondary-container m-0">
-				Für das Erstgespräch benötigen Sie:
+		<article class="bg-surface-container-low rounded-xl p-md">
+			<div class="flex items-center gap-sm mb-md">
+				<span
+					class="material-symbols-outlined text-primary"
+					aria-hidden="true">info</span
+				>
+				<h2 class="text-headline-md text-primary m-0">
+					Wichtige Informationen
+				</h2>
+			</div>
+			<p class="text-label-md text-on-surface-variant m-0">
+				Für das Erstgespräch wird benötigt:
 			</p>
 			<ul class="space-y-sm list-none p-0 mt-md mb-0">
 				<li class="flex gap-sm items-start">
 					<span
-						class="material-symbols-outlined text-primary text-[20px] mt-0.5 is-filled"
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5 is-filled"
 						aria-hidden="true">check_circle</span
 					>
-					<span class="text-body-md text-on-secondary-container">
+					<span class="text-body-md text-on-surface-variant">
 						Die Gesundheitskarte
 					</span>
 				</li>
 				<li class="flex gap-sm items-start">
 					<span
-						class="material-symbols-outlined text-primary text-[20px] mt-0.5 is-filled"
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5 is-filled"
 						aria-hidden="true">check_circle</span
 					>
-					<span class="text-body-md text-on-secondary-container">
+					<span class="text-body-md text-on-surface-variant">
 						Bei getrennten Eltern: Eine Einverständniserklärung
 					</span>
 				</li>
+			</ul>
+		</article>
+
+		<article class="bg-surface-container-low rounded-xl p-md">
+			<div class="flex items-center gap-sm mb-md">
+				<span
+					class="material-symbols-outlined text-primary"
+					aria-hidden="true">verified</span
+				>
+				<h2 class="text-headline-md text-primary m-0">
+					Qualitätssicherung
+				</h2>
+			</div>
+			<ul class="space-y-sm list-none p-0 m-0 text-on-surface-variant">
 				<li class="flex gap-sm items-start">
 					<span
-						class="material-symbols-outlined text-primary text-[20px] mt-0.5 is-filled"
+						class="material-symbols-outlined text-secondary text-[20px] mt-0.5 is-filled"
 						aria-hidden="true">check_circle</span
 					>
-					<span class="text-body-md text-on-secondary-container">
-						Alle Kassen und Privat
+					<span class="text-body-md">
+						Regelmäßige Mitarbeit in Intervisions- und Qualitätszirkeln
 					</span>
 				</li>
 			</ul>
-		</div>
-	</article>
+		</article>
+	</div>
 </section>

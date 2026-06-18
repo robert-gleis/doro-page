@@ -1,11 +1,22 @@
 ---
 // Head component — meta tags, fonts, OG, JSON-LD structured data
-const site = Astro.site ?? new URL('https://robert-gleis.github.io');
-const canonicalUrl = new URL(import.meta.env.BASE_URL, site).href;
-const ogImage = new URL(`${import.meta.env.BASE_URL}image.jpeg`, site).href;
+interface Props {
+	title?: string;
+	description?: string;
+	canonicalPath?: string;
+	includeJsonLd?: boolean;
+}
 
-const description =
-	'Psychotherapeutische Praxis für Kinder, Jugendliche und junge Erwachsene (9–21 J.) in Dormagen Zons. Dorothea Preiß — Tiefenpsychologisch fundierte und analytische Kinder- und Jugendpsychotherapeutin.';
+const {
+	title = 'Psychotherapeutische Praxis Dorothea Preiß — Dormagen Zons',
+	description = 'Psychotherapeutische Praxis für Kinder, Jugendliche und junge Erwachsene (9–21 J.) in Dormagen Zons. Dorothea Preiß — Tiefenpsychologisch fundierte und analytische Kinder- und Jugendpsychotherapeutin.',
+	canonicalPath,
+	includeJsonLd = true,
+} = Astro.props;
+
+const site = Astro.site ?? new URL('https://robert-gleis.github.io');
+const canonicalUrl = new URL(canonicalPath ?? import.meta.env.BASE_URL, site).href;
+const ogImage = new URL(`${import.meta.env.BASE_URL}image.jpeg`, site).href;
 
 const jsonLd = {
 	'@context': 'https://schema.org',
@@ -96,10 +107,7 @@ const jsonLd = {
 <meta property="og:url" content={canonicalUrl} />
 <meta property="og:locale" content="de_DE" />
 <meta property="og:site_name" content="Praxis Dorothea Preiß" />
-<meta
-	property="og:title"
-	content="Psychotherapeutische Praxis Dorothea Preiß — Dormagen Zons"
-/>
+<meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
 <meta property="og:image:width" content="724" />
@@ -111,11 +119,14 @@ const jsonLd = {
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Psychotherapeutische Praxis Dorothea Preiß" />
+<meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImage} />
 
-<title>Psychotherapeutische Praxis Dorothea Preiß — Dormagen Zons</title>
+<title>{title}</title>
 
-<!-- Structured Data: Psychologist / MedicalBusiness -->
-<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+{
+	includeJsonLd && (
+		<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+	)
+}
