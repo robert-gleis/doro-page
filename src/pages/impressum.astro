@@ -1,5 +1,8 @@
 ---
 import LegalLayout from '../components/LegalLayout.astro';
+
+const site = Astro.site ?? new URL('https://dpreiss.de');
+const websiteUrl = new URL(import.meta.env.BASE_URL, site).href;
 ---
 
 <LegalLayout
@@ -19,7 +22,8 @@ import LegalLayout from '../components/LegalLayout.astro';
 	</p>
 	<p>
 		<a href="tel:+4921339362102">02133 9362102</a><br />
-		<a href="mailto:d.preis@posteo.de">d.preis@posteo.de</a>
+		<a href="mailto:d.preis@posteo.de">d.preis@posteo.de</a><br />
+		Webseite: <a href={websiteUrl}>{websiteUrl}</a>
 	</p>
 	<p>
 		Heilkundliche Behandlungen sind gemäß § 4 Abs. 14 Umsatzsteuergesetz

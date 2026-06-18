@@ -14,7 +14,7 @@ const {
 	includeJsonLd = true,
 } = Astro.props;
 
-const site = Astro.site ?? new URL('https://robert-gleis.github.io');
+const site = Astro.site ?? new URL('https://dpreiss.de');
 const canonicalUrl = new URL(canonicalPath ?? import.meta.env.BASE_URL, site).href;
 const ogImage = new URL(`${import.meta.env.BASE_URL}image.jpeg`, site).href;
 

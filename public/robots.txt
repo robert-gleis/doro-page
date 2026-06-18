@@ -1,5 +1,5 @@
 # robots.txt — Praxis Dorothea Preiß
-# https://robert-gleis.github.io/doro-page/
+# https://dpreiss.de/
 #
 # Diese Datei erlaubt sowohl klassischen Suchmaschinen-Crawlern als auch
 # KI-/LLM-Crawlern den vollständigen Zugriff. Damit ist die Seite in
@@ -67,4 +67,4 @@ User-agent: DuckAssistBot
 Allow: /
 
 # --- Sitemap ------------------------------------------------------------
-Sitemap: https://robert-gleis.github.io/doro-page/sitemap-index.xml
+Sitemap: https://dpreiss.de/sitemap-index.xml

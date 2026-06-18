@@ -5,8 +5,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	base: '/doro-page/',
-	site: 'https://robert-gleis.github.io',
+	base: '/',
+	site: 'https://dpreiss.de',
 	integrations: [
 		sitemap({
 			changefreq: 'monthly',
