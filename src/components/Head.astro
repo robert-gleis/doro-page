@@ -8,8 +8,8 @@ interface Props {
 }
 
 const {
-	title = 'Psychotherapeutische Praxis Dorothea Preiß — Dormagen Zons',
-	description = 'Psychotherapeutische Praxis für Kinder, Jugendliche und junge Erwachsene (9–21 J.) in Dormagen Zons. Dorothea Preiß — Tiefenpsychologisch fundierte und analytische Kinder- und Jugendpsychotherapeutin.',
+	title = 'Psychotherapeutische Praxis Dorothea Preiß — Dormagen Nievenheim',
+	description = 'Psychotherapeutische Praxis für Kinder, Jugendliche und junge Erwachsene (0–21 J.) in Dormagen Nievenheim. Dorothea Preiß — Tiefenpsychologisch fundierte und analytische Kinder- und Jugendpsychotherapeutin.',
 	canonicalPath,
 	includeJsonLd = true,
 } = Astro.props;
@@ -29,10 +29,10 @@ const jsonLd = {
 	email: 'd.preis@posteo.de',
 	address: {
 		'@type': 'PostalAddress',
-		streetAddress: 'Saarwerdenstr. 9',
+		streetAddress: 'Bismarckstr. 110',
 		addressLocality: 'Dormagen',
 		addressRegion: 'NW',
-		postalCode: '41541',
+		postalCode: '41542',
 		addressCountry: 'DE',
 	},
 	contactPoint: {
@@ -57,7 +57,7 @@ const jsonLd = {
 	knowsLanguage: 'de',
 	audience: {
 		'@type': 'PeopleAudience',
-		suggestedMinAge: 9,
+		suggestedMinAge: 0,
 		suggestedMaxAge: 21,
 	},
 };
